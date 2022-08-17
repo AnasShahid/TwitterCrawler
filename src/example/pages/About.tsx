@@ -1,16 +1,15 @@
 import React from "react";
 import { Button } from "../styled-component/Style";
 
-export interface IAboutPageProps {}
+//when we will need this code then we will add into our code, we dont need this code for now.
+// export interface IAboutPageProps {} : React.FunctionComponent<IAboutPageProps>
 
-const AboutPage: React.FunctionComponent<IAboutPageProps> = (props) => {
+const AboutPage = () => {
   return (
     <div>
       <p>about page</p>
       <div>
-        <div>
-          <Button>Back To Home</Button>
-        </div>
+        <Button>Style Component Button</Button>
       </div>
     </div>
   );
