@@ -8,25 +8,21 @@ import {
 
 const Example = () => {
   const dispatch = useDispatch();
-  const count = useSelector(({ exampleReducer }: RootState) => exampleReducer);
+  const onAdd = () => {
+    dispatch(increamentCouter());
+  };
+  const onSubtract = () => {
+    dispatch(decreamentCouter());
+  };
+  const {
+    example: { count },
+  } = useSelector(({ exampleReducer }: RootState) => exampleReducer);
 
   return (
     <div>
-      <button
-        onClick={() => {
-          dispatch(increamentCouter());
-        }}
-      >
-        Add
-      </button>
-      <h2>Count: {count}</h2>
-      <button
-        onClick={() => {
-          dispatch(decreamentCouter());
-        }}
-      >
-        Subtract
-      </button>
+      <button onClick={onAdd}>Add</button>
+      <h2>Count:{count} </h2>
+      <button onClick={onSubtract}>Subtract</button>
     </div>
   );
 };
