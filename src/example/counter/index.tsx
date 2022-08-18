@@ -5,6 +5,7 @@ import {
   increamentCouter,
   decreamentCouter,
 } from "../../store/modules/example/action";
+import { Button, Text } from "../styled-component";
 
 const Example = () => {
   const dispatch = useDispatch();
@@ -20,9 +21,9 @@ const Example = () => {
 
   return (
     <div>
-      <button onClick={onAdd}>Add</button>
-      <h2>Count:{count} </h2>
-      <button onClick={onSubtract}>Subtract</button>
+      <Button onClick={onAdd}>Add</Button>
+      <Text>Count:{count} </Text>
+      <Button onClick={onSubtract}>Subtract</Button>
     </div>
   );
 };
