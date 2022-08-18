@@ -1,27 +1,19 @@
 import React from "react";
-import MenuItems from "../routes/RouteConfig";
+import MenuItems from "../config/RouteConfig";
 import { Link } from "react-router-dom";
-import { Param } from "../model/Route";
 
 const Header = () => {
-  const createTo = (path: string, paramObj?: Array<Param>): string => {
-    let newPath = path;
-    for (const p of paramObj!) {
-      newPath = newPath.replace(":" + p.id, p.value);
-    }
-    return newPath;
-  };
+  // const createTo = (path: string, paramObj?: Array<Param>): string => {
+  //   let newPath = path;
+  //   paramObj!.forEach((p) => {
+  //     newPath = newPath.replace(":" + p.id, p.value);
+  //   });
+  //   return newPath;
+  // };
   return (
     <div>
       {MenuItems.map((menuItem) => (
-        <Link
-          key={menuItem.title}
-          to={
-            menuItem.containParam
-              ? createTo(menuItem.path, menuItem.params)
-              : menuItem.path
-          }
-        >
+        <Link key={menuItem.title} to={menuItem.path}>
           {menuItem.title + " "}
         </Link>
       ))}

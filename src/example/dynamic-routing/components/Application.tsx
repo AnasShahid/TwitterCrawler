@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./Header";
 import Container from "./Container";
-import MenuItems from "../routes/RouteConfig";
+import MenuItems from "../config/RouteConfig";
 
 const Application = () => {
   return (

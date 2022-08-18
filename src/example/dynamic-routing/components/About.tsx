@@ -6,7 +6,7 @@ const User = () => {
   const { userId, name } = useParams();
   return (
     <>
-      User details - With Params <br />
+      User details <br />
       User <b>{userId}</b>
       <br />
       Haris Qadeer <b>{name}</b>
