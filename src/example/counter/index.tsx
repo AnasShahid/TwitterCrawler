@@ -7,7 +7,7 @@ import {
 } from "../../store/modules/example/action";
 import { Button, Text } from "../styled-component";
 
-const Example = () => {
+const Counter = () => {
   const dispatch = useDispatch();
   const onAdd = () => {
     dispatch(increamentCouter());
@@ -28,4 +28,4 @@ const Example = () => {
   );
 };
 
-export default Example;
+export default Counter;

@@ -1,25 +1,23 @@
 import { createGlobalStyle } from "styled-components";
 
-export const GlobalStyle = createGlobalStyle`
+export const MainLayout = createGlobalStyle`
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: 0;
   }
 
-  body  {
+  body {
     -webkit-font-smoothing: antialiased;
-    height: 100vh;
-    width: 50vw;
+    width: 100%;
+    height: 100%
     margin: 0 auto;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  }
+  .App {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-
-  h1 {
-    font-size: 3.375rem;
-  }
-
 `;
