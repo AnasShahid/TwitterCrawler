@@ -1,19 +1,19 @@
 import React from "react";
 import { Route } from "../interfaces/Route";
-import Home from "../components/Home";
-import Contact from "../components/Contact";
-import About from "../components/About";
+import Home from "../../../components/pages/Home";
+import Contact from "../../../components/pages/Contact";
+import About from "../../../components/pages/About";
 
 const MenuItems: Array<Route> = [
-  { path: "/", title: "Home", content: <Home /> },
+  { path: "/", title: "Tweet", content: <Home /> },
   {
-    path: "/contact",
-    title: "Contact",
+    path: "/users",
+    title: "Users",
     content: <Contact email="haris@nisum.com" mobile="+91 99795 38985" />,
   },
   {
-    path: "/about",
-    title: "About",
+    path: "/default-tweets",
+    title: "Default Tweets",
     content: <About />,
   },
 ];

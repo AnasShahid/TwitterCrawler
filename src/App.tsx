@@ -1,19 +1,15 @@
-import Counter from "./example/counter";
 import { Provider } from "react-redux";
+import MainContainer from "./example/dynamic-routing/Layout/AppContainer";
+import { BrowserRouter as Route } from "react-router-dom";
+
 import store from "./store";
-import { ThemeProvider } from "styled-components";
-import theme from "./example/theme/Colors";
-import { MainLayout } from "./example/global-styles";
 
 function App() {
   return (
     <Provider store={store}>
-      <ThemeProvider theme={theme}>
-        <MainLayout />
-        <div className="App">
-          <Counter />
-        </div>
-      </ThemeProvider>
+      <Route>
+        <MainContainer />
+      </Route>
     </Provider>
   );
 }
