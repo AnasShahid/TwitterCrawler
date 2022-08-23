@@ -1,40 +1,50 @@
 {
   "data": {
+    "id": "1561720927204900866",
     "entities": {
-      "annotations": [
+      "hashtags": [
         {
-          "start": 8,
-          "end": 17,
-          "probability": 0.84,
-          "type": "Person",
-          "normalized_text": "imran khan"
+          "start": 28,
+          "end": 32,
+          "tag": "PPP"
         },
         {
-          "start": 37,
-          "end": 43,
-          "probability": 0.9535,
-          "type": "Place",
-          "normalized_text": "Karachi"
+          "start": 33,
+          "end": 40,
+          "tag": "Multan"
+        },
+        {
+          "start": 41,
+          "end": 47,
+          "tag": "NA157"
+        }
+      ],
+      "urls": [
+        {
+          "start": 48,
+          "end": 71,
+          "url": "https://t.co/nJRywDvfWG",
+          "expanded_url": "https://twitter.com/KasimGillani/status/1561720927204900866/photo/1",
+          "display_url": "pic.twitter.com/nJRywDvfWG",
+          "media_key": "3_1561720902907301888"
         }
       ]
     },
-    "author_id": "434674744",
-    "created_at": "2022-08-22T05:05:18.000Z",
-    "lang": "en",
-    "source": "Twitter for iPhone",
+    "created_at": "2022-08-22T14:24:19.000Z",
+    "author_id": "121573949",
     "public_metrics": {
-      "retweet_count": 2021,
-      "reply_count": 471,
-      "like_count": 14123,
-      "quote_count": 60
+      "retweet_count": 196,
+      "reply_count": 758,
+      "like_count": 991,
+      "quote_count": 114
     },
-    "conversation_id": "1561580248986181633",
-    "text": "The way imran khan swept the seat of Karachi shows that if the elections are held today he will sweep the polls // well done 👍 👍👍",
-    "id": "1561580248986181633"
+    "text": "@murtazawahab1 Masha Allah ... Awesome clickk 💕💕🥰 @murtazawahab1 Masha Allah ... Awesome clickk 💕💕🥰 @murtazawahab1 Masha Allah ... Awesome clickk 💕💕🥰 @murtazawahab1 Masha Allah ... Awesome clickk 💕💕🥰"
   },
   "user": {
     "id": "434674744",
     "name": "Kamran Shahid",
-    "username": "FrontlineKamran"
+    "username": "FrontlineKamran",
+    "verified": false,
+    "profile_image_url": "https://pbs.twimg.com/profile_images/1561694422135357440/LC0JSDSU_normal.jpg"
   }
 }

@@ -17,32 +17,16 @@ text-align : left:
 margin-left:10px;
   width: 85%;
 `;
-export const ImgContainer = styled.div`
-  width: 65px;
-  height: 65px;
-  margin: 5px auto;
-`;
-export const Avatar = styled.img`
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-`;
+
 export const UserInfo = styled.div`
   display: flex;
   align-items: center;
-  .title {
+  h2 {
+    font-size: 20px;
     margin: 0;
     &:hover {
       cursor: pointer;
       border-bottom: 2px solid;
-    }
-  }
-  .user-name {
-    margin-left: 10px;
-    color: grey;
-    font-weight: 700;
-    &:hover {
-      cursor: pointer;
     }
   }
 `;
@@ -51,6 +35,13 @@ export const InfoConatiner = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 5px 0;
+  .more {
+    margin-right: 16px;
+    width: 25px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
 `;
 // export const UserName = styled.div`
 //   margin-left: 5px;
@@ -76,4 +67,8 @@ export const FeedbackContainer = styled.div`
   width: 80%;
   text-align: left;
   margin: 10px 0;
+`;
+export const Feedback = styled.div`
+  align-items: center;
+  display: flex;
 `;

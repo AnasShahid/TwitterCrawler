@@ -1,0 +1,6 @@
+.user-title-container {
+  display: flex;
+}
+.user-title-container h2 {
+  margin-right: 10px;
+}
