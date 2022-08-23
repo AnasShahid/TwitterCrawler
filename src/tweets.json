@@ -1,0 +1,40 @@
+{
+  "data": {
+    "entities": {
+      "annotations": [
+        {
+          "start": 8,
+          "end": 17,
+          "probability": 0.84,
+          "type": "Person",
+          "normalized_text": "imran khan"
+        },
+        {
+          "start": 37,
+          "end": 43,
+          "probability": 0.9535,
+          "type": "Place",
+          "normalized_text": "Karachi"
+        }
+      ]
+    },
+    "author_id": "434674744",
+    "created_at": "2022-08-22T05:05:18.000Z",
+    "lang": "en",
+    "source": "Twitter for iPhone",
+    "public_metrics": {
+      "retweet_count": 2021,
+      "reply_count": 471,
+      "like_count": 14123,
+      "quote_count": 60
+    },
+    "conversation_id": "1561580248986181633",
+    "text": "The way imran khan swept the seat of Karachi shows that if the elections are held today he will sweep the polls // well done 👍 👍👍",
+    "id": "1561580248986181633"
+  },
+  "user": {
+    "id": "434674744",
+    "name": "Kamran Shahid",
+    "username": "FrontlineKamran"
+  }
+}
