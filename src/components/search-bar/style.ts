@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Search } from "@styled-icons/material-outlined/Search";
 
 export const Input = styled.input`
   height: 50px;
@@ -26,6 +27,19 @@ export const Input = styled.input`
   }
 `;
 
+export const SearchFilter = styled.div`
+  position: absolute;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  width: 100%;
+  border: 1px gray;
+  -webkit-box-shadow: 0px 3px 8px 2px #ccc;
+  padding: 11px 20px;
+  border-radius: 10px;
+`;
+
 export const StyledInput = styled.div`
   &.inputWithIcon {
     position: relative;
@@ -36,22 +50,13 @@ export const StyledInput = styled.div`
     left: 15px;
     top: 54%;
     transform: translateY(-50%);
-    svg {
-      fill: black;
-      transition: 0.3s;
-    }
   }
-
-  button.right-icon {
-    background: none;
-    border: none;
-    position: absolute;
-    right: 10px;
-    top: 52%;
-    transform: translateY(-50%);
-    svg {
-      fill: black;
-      transition: 0.3s;
-    }
+`;
+export const SearchIcon = styled(Search)`
+  width: 30px;
+  &:hover {
+    fill: dodgerBlue;
+    transition: 0.3s;
+    cursor: pointer;
   }
 `;

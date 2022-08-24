@@ -1,13 +1,13 @@
 import React from "react";
-import SearchBar from "../search-bar/SearchBar";
 import MenuItems from "../../example/dynamic-routing/config/RouteConfig";
-import { Menu, MenuLink, Nav, NavbarContainer } from "./NavbarStyle";
+import { Menu, MenuLink, Nav, NavbarContainer, Heading } from "./style";
 
 const Navbar = () => {
   return (
     <div>
       <Nav>
         <NavbarContainer>
+          <Heading>Tweeter Crawler</Heading>
           <Menu>
             {MenuItems.map((menuItem) => (
               <MenuLink key={menuItem.title} to={menuItem.path}>
@@ -15,9 +15,6 @@ const Navbar = () => {
               </MenuLink>
             ))}
           </Menu>
-          <div>
-            <SearchBar />
-          </div>
         </NavbarContainer>
       </Nav>
     </div>

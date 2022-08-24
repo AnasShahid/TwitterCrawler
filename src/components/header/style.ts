@@ -1,6 +1,7 @@
 import { Container } from "../../example/global-styles";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+// import { Twitter } from "@styled-icons/boxicons-logos/Twitter";
 
 export const Nav = styled.nav`
   font-size: 18px;
@@ -18,7 +19,7 @@ export const Nav = styled.nav`
 
 export const NavbarContainer = styled(Container)`
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   height: 80px;
   ${Container};
@@ -60,12 +61,15 @@ export const MenuIcon = styled.div`
     cursor: pointer;
   }
 `;
+export const Heading = styled.h1`
+  color: white;
+`;
 
 export const Menu = styled.ul`
   display: flex;
   align-items: center;
   text-align: center;
-  width: 40%;
+  width: 35%;
 
   @media only screen and (max-width: 1000px) {
     display: flex;
@@ -144,3 +148,8 @@ export const MenuLinkBtn = styled.a`
   border: none;
   outline: none;
 `;
+
+// export const TwitterIcon = styled(Twitter)`
+//   width: 50px;
+//   fill: white;
+// `;
