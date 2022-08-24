@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import tweets from "../../tweets.json";
 import {
   Card,
@@ -11,6 +11,8 @@ import {
   TextContainer,
   FeedbackContainer,
   Feedback,
+  Followers,
+  FollowersContainer,
 } from "./style";
 import {
   HeartIcon,
@@ -23,7 +25,25 @@ import UserAvatar from "../common/avatar";
 import Title from "../common/Title";
 import UserName from "../common/user-name";
 
-const TweetCard = () => {
+const TweetCard: React.FC = () => {
+  const clickHandler = (e: any) => {
+    const el = e.target.closest("span");
+    if (el && e.currentTarget.contains(el)) {
+      console.log(el.textContent);
+    }
+  };
+
+  const hashTag = () => {
+    return {
+      __html: tweets.data.text.replaceAll(
+        /(#\S+|@\S+)/g,
+        "<span  class='hash-mention'>$1</span>"
+      ),
+    };
+  };
+  useEffect(() => {
+    hashTag();
+  }, []);
   const avatarStyle = { height: "70px", width: "70px" };
   return (
     <Card>
@@ -39,13 +59,21 @@ const TweetCard = () => {
                 isVerified={tweets.user.verified}
               />
               <UserName userName={tweets.user.username} />
-              <CreatedAt>. Aug 14</CreatedAt>
+              <CreatedAt>.Aug 14</CreatedAt>
             </UserInfo>
+            <FollowersContainer>
+              <Followers>
+                {tweets.user.public_metrics.followers_count}
+              </Followers>
+              ,Followers
+            </FollowersContainer>
             <div className="more">
               <MoreIcon />
             </div>
           </InfoConatiner>
-          <TextContainer>{tweets.data.text}</TextContainer>
+          <TextContainer>
+            <div onClick={clickHandler} dangerouslySetInnerHTML={hashTag()} />
+          </TextContainer>
           <FeedbackContainer>
             <Feedback>
               <ReplyIcon />

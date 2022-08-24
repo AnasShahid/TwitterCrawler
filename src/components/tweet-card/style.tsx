@@ -37,15 +37,14 @@ export const InfoConatiner = styled.div`
   padding: 5px 0;
   .more {
     margin-right: 16px;
+
     width: 25px;
     &:hover {
       cursor: pointer;
     }
   }
 `;
-// export const UserName = styled.div`
-//   margin-left: 5px;
-// `;
+
 export const CreatedAt = styled.div`
   margin-left: 10px;
   color: grey;
@@ -55,20 +54,34 @@ export const CreatedAt = styled.div`
     cursor: pointer;
   }
 `;
-// export const Title = styled.h3`
-// `;
+
 export const TextContainer = styled.div`
   font-weight: 500;
   text-align: left;
+  .hash-mention {
+    color: ${({ theme }) => theme.colors.lightBlue};
+    font-weight: 600;
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
 `;
 export const FeedbackContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 86%;
   text-align: left;
   margin: 10px 0;
 `;
 export const Feedback = styled.div`
   align-items: center;
   display: flex;
+`;
+export const FollowersContainer = styled.div`
+  font-weight: 600;
+  color: ${({ theme }) => theme.colors.grey};
+`;
+export const Followers = styled.span`
+  color: ${({ theme }) => theme.colors.black}; ;
 `;
