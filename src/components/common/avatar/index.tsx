@@ -1,9 +1,10 @@
 import React from "react";
+import { StyleAvatar } from "../../../interfaces";
 import { Avatar, ImgContainer } from "./style";
 
 const UserAvatar: React.FC<{
   url: string;
-  style: { width: string; height: string };
+  style: StyleAvatar;
 }> = ({ url, style }) => {
   return (
     <ImgContainer style={style}>
