@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import tweets from "../../tweets.json";
+import data from "../../__mock__/data.json";
 import {
   Card,
   AvatarContainer,
@@ -35,7 +35,7 @@ const TweetCard: React.FC = () => {
 
   const hashTag = () => {
     return {
-      __html: tweets.data.text.replaceAll(
+      __html: data.data.text.replaceAll(
         /(#\S+|@\S+)/g,
         "<span  class='hash-mention'>$1</span>"
       ),
@@ -49,22 +49,17 @@ const TweetCard: React.FC = () => {
     <Card>
       <Tweet>
         <AvatarContainer>
-          <UserAvatar url={tweets.user.profile_image_url} style={avatarStyle} />
+          <UserAvatar url={data.user.profile_image_url} style={avatarStyle} />
         </AvatarContainer>
         <TweetContainer>
           <InfoConatiner>
             <UserInfo>
-              <Title
-                title={tweets.user.name}
-                isVerified={tweets.user.verified}
-              />
-              <UserName userName={tweets.user.username} />
+              <Title title={data.user.name} isVerified={data.user.verified} />
+              <UserName userName={data.user.username} />
               <CreatedAt>.Aug 14</CreatedAt>
             </UserInfo>
             <FollowersContainer>
-              <Followers>
-                {tweets.user.public_metrics.followers_count}
-              </Followers>
+              <Followers>{data.user.public_metrics.followers_count}</Followers>
               ,Followers
             </FollowersContainer>
             <div className="more">
@@ -77,16 +72,16 @@ const TweetCard: React.FC = () => {
           <FeedbackContainer>
             <Feedback>
               <ReplyIcon />
-              <span>{tweets.data.public_metrics.reply_count}</span>
+              <span>{data.data.public_metrics.reply_count}</span>
             </Feedback>
             <Feedback>
               <RetweetIcon />
-              <span>{tweets.data.public_metrics.retweet_count}</span>
+              <span>{data.data.public_metrics.retweet_count}</span>
             </Feedback>
 
             <Feedback>
               <HeartIcon />
-              <span>{tweets.data.public_metrics.like_count}</span>
+              <span>{data.data.public_metrics.like_count}</span>
             </Feedback>
 
             <Feedback>

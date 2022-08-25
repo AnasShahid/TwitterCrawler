@@ -1,8 +1,8 @@
 import React from "react";
-import "./style.css";
+import { Username } from "./style";
 
 const UserName: React.FC<{ userName: string }> = ({ userName }) => {
-  return <div className="user-name">@{userName}</div>;
+  return <Username>@{userName}</Username>;
 };
 
 export default UserName;
