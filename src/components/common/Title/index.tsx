@@ -1,11 +1,9 @@
 import React from "react";
 import { TitleContainer } from "./style";
 import { VerifiedIcon } from "../../../icons/styled-icons";
+import { UserTitle } from "../../../interfaces";
 
-const Title: React.FC<{ title: string; isVerified: boolean }> = ({
-  title,
-  isVerified,
-}) => {
+const Title: React.FC<UserTitle> = ({ title, isVerified }) => {
   return (
     <TitleContainer>
       <h2>{title}</h2>
