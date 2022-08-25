@@ -1,7 +1,6 @@
 import { Provider } from "react-redux";
 import { ThemeProvider } from "styled-components";
 import "./App.css";
-import TweetCard from "./components/tweet-card";
 import Counter from "./example/counter";
 import { MainLayout } from "./example/global-styles";
 import theme from "./example/theme/Colors";
