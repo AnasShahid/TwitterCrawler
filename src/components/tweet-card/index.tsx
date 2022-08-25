@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import tweet from "../../__mock__/tweet.json";
+
 import {
   Card,
   AvatarContainer,
@@ -24,15 +25,27 @@ import {
 import UserAvatar from "../common/avatar";
 import Title from "../common/Title";
 import UserName from "../common/user-name";
+import moment from "moment";
 
 const TweetCard: React.FC = () => {
+  const [createdAt, setCreatedAt] = useState("");
   const clickHandler = (e: any) => {
     const el = e.target.closest("span");
     if (el && e.currentTarget.contains(el)) {
       console.log(el.textContent);
     }
   };
-
+  const getCreatedAt = () => {
+    const duration = moment.duration(
+      moment(new Date()).diff(moment(tweet.data.created_at))
+    );
+    const hours = +duration.asHours();
+    if (hours < 0) {
+      setCreatedAt(String(hours % 60));
+    } else if (hours > 24) {
+      setCreatedAt(moment(tweet.data.created_at).format("MMMM DD"));
+    } else setCreatedAt(String(hours));
+  };
   const hashTag = () => {
     return {
       __html: tweet.data.text.replaceAll(
@@ -43,7 +56,8 @@ const TweetCard: React.FC = () => {
   };
   useEffect(() => {
     hashTag();
-  }, []);
+    getCreatedAt();
+  });
   const avatarStyle = { height: "70px", width: "70px" };
   return (
     <Card>
@@ -56,7 +70,7 @@ const TweetCard: React.FC = () => {
             <UserInfo>
               <Title title={tweet.user.name} isVerified={tweet.user.verified} />
               <UserName userName={tweet.user.username} />
-              <CreatedAt>.Aug 14</CreatedAt>
+              <CreatedAt>.{createdAt}</CreatedAt>
             </UserInfo>
             <FollowersContainer>
               <Followers>{tweet.user.public_metrics.followers_count}</Followers>
