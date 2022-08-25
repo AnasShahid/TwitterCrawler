@@ -12,7 +12,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <MainLayout />
         <div className="App">
-          <Counter />å
+          <Counter />
         </div>
       </ThemeProvider>
     </Provider>
