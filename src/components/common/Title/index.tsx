@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import { TitleContainer } from "./style";
 import { VerifiedIcon } from "../../../icons/styled-icons";
 
 const Title: React.FC<{ title: string; isVerified: boolean }> = ({
@@ -7,10 +7,10 @@ const Title: React.FC<{ title: string; isVerified: boolean }> = ({
   isVerified,
 }) => {
   return (
-    <div className="user-title-container">
+    <TitleContainer>
       <h2>{title}</h2>
       {isVerified && <VerifiedIcon />}
-    </div>
+    </TitleContainer>
   );
 };
 
