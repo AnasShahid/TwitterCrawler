@@ -1,9 +1,11 @@
-import Counter from "./example/counter";
 import { Provider } from "react-redux";
-import store from "./store";
 import { ThemeProvider } from "styled-components";
-import theme from "./example/theme/Colors";
+import "./App.css";
+import TweetCard from "./components/tweet-card";
+import Counter from "./example/counter";
 import { MainLayout } from "./example/global-styles";
+import theme from "./example/theme/Colors";
+import store from "./store";
 
 function App() {
   return (
