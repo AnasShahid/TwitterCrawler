@@ -1,8 +1,8 @@
-export interface StyleAvatar {
+export type StyleAvatar = {
   width?: string;
   height?: string;
-}
-export interface AvatarInfo {
+};
+export type AvatarInfo = {
   url: string;
   style: StyleAvatar;
-}
+};

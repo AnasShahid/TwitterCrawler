@@ -1,7 +1,9 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { Whisper } from "rsuite";
 import "rsuite/dist/rsuite.css";
 import { User } from "../../../interfaces/components/tweet-card/index";
+import { addUserToAnalysis } from "../../../store/modules/tweet/analysis/action";
 import { hashTagHighlighter } from "../../../utils/helper";
 import UserAvatar from "../avatar";
 import Title from "../title";
@@ -18,44 +20,57 @@ import {
 
 const avatarStyle = { height: "70px", width: "70px" };
 
-export const speaker = (user: User) => (
-  <UserDetails>
-    <PopOverHeader>
-      <AvatarContainer>
-        <UserAvatar url={user.profile_image_url} style={avatarStyle} />
-      </AvatarContainer>
-      <AddToAnalysisButton>Add to Analysis</AddToAnalysisButton>
-    </PopOverHeader>
-    <PopOverBody>
-      <Title title={user.name} isVerified={user.verified} />
-      <h4>@{user.username}</h4>
-      <UserDiscription>
-        <TextContainer>
-          <div dangerouslySetInnerHTML={hashTagHighlighter(user.description)} />
-        </TextContainer>
-      </UserDiscription>
-      <Connections>
-        <div>
-          {user.public_metrics.followers_count} <span>Followers</span>
-        </div>
-        <div>
-          {user.public_metrics.following_count} <span>Following</span>
-        </div>
-      </Connections>
-    </PopOverBody>
-  </UserDetails>
-);
-
-const PopOver: React.FC<{ user: User; children: any }> = ({
+const PopOver: React.FC<{ user: User; children: JSX.Element }> = ({
   user,
   children,
 }) => {
+  const dispatch = useDispatch();
+  const onAddTOAnalysis = (user: User) => {
+    dispatch(addUserToAnalysis(user));
+  };
+  const popOverSpeaker = (user: User) => {
+    return (
+      <UserDetails>
+        <PopOverHeader>
+          <AvatarContainer>
+            <UserAvatar url={user.profile_image_url} style={avatarStyle} />
+          </AvatarContainer>
+          <AddToAnalysisButton
+            onClick={() => {
+              onAddTOAnalysis(user);
+            }}
+          >
+            Add to Analysis
+          </AddToAnalysisButton>
+        </PopOverHeader>
+        <PopOverBody>
+          <Title title={user.name} isVerified={user.verified} />
+          <h4>@{user.username}</h4>
+          <UserDiscription>
+            <TextContainer>
+              <div
+                dangerouslySetInnerHTML={hashTagHighlighter(user.description)}
+              />
+            </TextContainer>
+          </UserDiscription>
+          <Connections>
+            <div>
+              {user.public_metrics.followers_count} <span>Followers</span>
+            </div>
+            <div>
+              {user.public_metrics.following_count} <span>Following</span>
+            </div>
+          </Connections>
+        </PopOverBody>
+      </UserDetails>
+    );
+  };
   return (
     <Whisper
       placement="bottom"
       trigger="hover"
       controlId="control-id-hover-enterable"
-      speaker={speaker(user)}
+      speaker={popOverSpeaker(user)}
       enterable
     >
       {children}
