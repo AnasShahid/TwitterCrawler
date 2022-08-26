@@ -1,5 +1,5 @@
 import { Provider } from "react-redux";
-import MainContainer from "./example/dynamic-routing/Layout/AppContainer";
+import MainContainer from "./routes/Layout/AppContainer";
 import { BrowserRouter as Route } from "react-router-dom";
 
 import store from "./store";

@@ -11,6 +11,7 @@ export const Card: React.FC<IData> = ({ owner, imageUrl }) => {
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
+        padding: "10px",
       }}
     >
       <img style={{ width: "40%" }} src={imageUrl} alt="alt" />

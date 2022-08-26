@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { Input, StyledInput, SearchFilter, SearchIcon } from "./style";
+import {
+  Input,
+  StyledInput,
+  SearchFilter,
+  SearchIcon,
+  SearchIconContainer,
+  SearchBarContainer,
+  Select,
+} from "./style";
 
 const SearchBar = () => {
   const handleChange = (event: any) => {
@@ -15,15 +23,13 @@ const SearchBar = () => {
     "Anas Shahid",
     "Hamza Malik",
   ];
-
   const filter = Names.filter((name) =>
     name.match(new RegExp(searchValue, "i"))
   ).map((name) => {
     return <li key={name}>{name} </li>;
   });
-
   return (
-    <div>
+    <SearchBarContainer>
       <StyledInput className={"inputWithIcon"}>
         <Input
           type="text"
@@ -41,11 +47,18 @@ const SearchBar = () => {
         >
           {filter.length === 0 ? "No Data Found" : filter}
         </SearchFilter>
-        <div className="left-icon">
+        <Select className="right-icon">
+          <option value="" hidden>
+            All
+          </option>
+          <option value="1">Tweets</option>
+          <option value="2">Users</option>
+        </Select>
+        <SearchIconContainer>
           <SearchIcon />
-        </div>
+        </SearchIconContainer>
       </StyledInput>
-    </div>
+    </SearchBarContainer>
   );
 };
 export default SearchBar;

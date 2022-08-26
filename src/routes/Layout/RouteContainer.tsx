@@ -3,7 +3,7 @@ import React, { ReactNode } from "react";
 interface ContainerProps {
   content: ReactNode;
 }
-const Container = ({ content }: ContainerProps) => {
+const RouteContent = ({ content }: ContainerProps) => {
   return <div>{content}</div>;
 };
-export default Container;
+export default RouteContent;

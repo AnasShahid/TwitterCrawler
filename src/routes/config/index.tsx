@@ -1,7 +1,7 @@
 import React from "react";
 import { Route } from "../interfaces/Route";
-import Home from "../../../components/pages/Home";
-import Contact from "../../../components/pages/Contact";
+import Home from "../../example/pages/Home";
+import Contact from "../../example/pages/Contact";
 
 const MenuItems: Array<Route> = [
   { path: "/", title: "Tweet", content: <Home /> },
