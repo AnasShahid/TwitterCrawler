@@ -1,8 +1,5 @@
 import styled from "styled-components";
-interface StyleAvatar {
-  width?: string;
-  height?: string;
-}
+import { StyleAvatar } from "../../../interfaces";
 export const ImgContainer = styled.div<StyleAvatar>`
   width: ${(p: StyleAvatar) => p.width};
   height: ${(p: StyleAvatar) => p.height};

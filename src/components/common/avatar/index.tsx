@@ -1,10 +1,8 @@
 import React from "react";
+import { AvatarInfo } from "../../../interfaces";
 import { Avatar, ImgContainer } from "./style";
 
-const UserAvatar: React.FC<{
-  url: string;
-  style: { width: string; height: string };
-}> = ({ url, style }) => {
+const UserAvatar: React.FC<AvatarInfo> = ({ url, style }) => {
   return (
     <ImgContainer style={style}>
       <Avatar src={url} />
