@@ -6,6 +6,7 @@ import Counter from "./example/counter";
 import { MainLayout } from "./example/global-styles";
 import theme from "./example/theme/Colors";
 import store from "./store";
+import tweet from "./__mock__/tweet.json";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <MainLayout />
         <div className="App">
           <Counter />
+          <TweetCard tweet={tweet.data} user={tweet.user} />
         </div>
       </ThemeProvider>
     </Provider>

@@ -7,8 +7,9 @@ import {
   ShareIcon,
 } from "../../icons/styled-icons";
 import { TweetInfo } from "../../interfaces/components/tweet-card";
-import { getFormatedDate, hashTag } from "../../utils/helper";
+import { getFormattedDate, hashTagHighlighter } from "../../utils/helper";
 import UserAvatar from "../common/avatar";
+import PopOver from "../common/pop-over";
 import Title from "../common/title";
 import UserName from "../common/user-name";
 import {
@@ -38,16 +39,21 @@ const TweetCard: React.FC<TweetInfo> = ({ tweet, user }) => {
   return (
     <Card>
       <Tweet>
-        <AvatarContainer>
-          <UserAvatar url={user.profile_image_url} style={avatarStyle} />
-        </AvatarContainer>
+        <PopOver user={user}>
+          <AvatarContainer>
+            <UserAvatar url={user.profile_image_url} style={avatarStyle} />
+          </AvatarContainer>
+        </PopOver>
+
         <TweetContainer>
           <InfoConatiner>
-            <UserInfo>
-              <Title title={user.name} isVerified={user.verified} />
-              <UserName userName={user.username} />
-              <CreatedAt>.{getFormatedDate(tweet.created_at)}</CreatedAt>
-            </UserInfo>
+            <PopOver user={user}>
+              <UserInfo>
+                <Title title={user.name} isVerified={user.verified} />
+                <UserName userName={user.username} />
+                <CreatedAt>.{getFormattedDate(tweet.created_at)}</CreatedAt>
+              </UserInfo>
+            </PopOver>
             <FollowersContainer>
               <Followers>{user.public_metrics.followers_count}</Followers>
               ,Followers
@@ -59,7 +65,7 @@ const TweetCard: React.FC<TweetInfo> = ({ tweet, user }) => {
           <TextContainer>
             <div
               onClick={clickHandler}
-              dangerouslySetInnerHTML={hashTag(tweet.text)}
+              dangerouslySetInnerHTML={hashTagHighlighter(tweet.text)}
             />
           </TextContainer>
           <FeedbackContainer>

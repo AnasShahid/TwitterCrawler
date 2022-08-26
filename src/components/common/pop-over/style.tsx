@@ -56,6 +56,19 @@ export const UserDiscription = styled.div`
   color: ${({ theme }) => theme.colors.black};
 `;
 
+export const TextContainer = styled.div`
+  font-weight: 500;
+  text-align: left;
+  font-size: 16px;
+  .hash-mention {
+    color: ${({ theme }) => theme.colors.lightBlue};
+    font-weight: 600;
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+`;
 export const Connections = styled.div`
   margin: 10px 0;
   width: 80%;

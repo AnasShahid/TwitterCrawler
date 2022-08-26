@@ -1,63 +1,66 @@
 import React from "react";
-import { Button, Whisper } from "rsuite";
-import UserAvatar from "../avatar";
+import { Whisper } from "rsuite";
 import "rsuite/dist/rsuite.css";
+import { User } from "../../../interfaces/components/tweet-card/index";
+import { hashTagHighlighter } from "../../../utils/helper";
+import UserAvatar from "../avatar";
+import Title from "../title";
 import {
   AddToAnalysisButton,
   AvatarContainer,
   Connections,
   PopOverBody,
   PopOverHeader,
+  TextContainer,
   UserDetails,
   UserDiscription,
 } from "./style";
-import Title from "../title";
 
-const UserPopOver: React.FC = () => {
-  const avatarStyle = { height: "70px", width: "70px" };
-  const profile_image_url =
-    "https://pbs.twimg.com/profile_images/1387160070643875840/AdMdZpk9_normal.jpg";
-  const speaker = (
-    <UserDetails>
-      <PopOverHeader>
-        <AvatarContainer>
-          <UserAvatar url={profile_image_url} style={avatarStyle} />
-        </AvatarContainer>
-        <AddToAnalysisButton>Add to Analysis</AddToAnalysisButton>
-      </PopOverHeader>
-      <PopOverBody>
-        <Title title="Muhammad Haris moin" isVerified={true} />
-        <h4>@hmoin1122</h4>
-        <UserDiscription>
-          What a beautiful place. Hopefully there will be a lot of marked spots
-          for trekking. Can’t believe such a sprawling urban oasis is in
-          #Karachi
-        </UserDiscription>
-        <Connections>
-          <div>
-            100 <span>Followers</span>
-          </div>
-          <div>
-            100 <span>Following</span>
-          </div>
-        </Connections>
-      </PopOverBody>
-    </UserDetails>
-  );
+const avatarStyle = { height: "70px", width: "70px" };
 
+export const speaker = (user: User) => (
+  <UserDetails>
+    <PopOverHeader>
+      <AvatarContainer>
+        <UserAvatar url={user.profile_image_url} style={avatarStyle} />
+      </AvatarContainer>
+      <AddToAnalysisButton>Add to Analysis</AddToAnalysisButton>
+    </PopOverHeader>
+    <PopOverBody>
+      <Title title={user.name} isVerified={user.verified} />
+      <h4>@{user.username}</h4>
+      <UserDiscription>
+        <TextContainer>
+          <div dangerouslySetInnerHTML={hashTagHighlighter(user.description)} />
+        </TextContainer>
+      </UserDiscription>
+      <Connections>
+        <div>
+          {user.public_metrics.followers_count} <span>Followers</span>
+        </div>
+        <div>
+          {user.public_metrics.following_count} <span>Following</span>
+        </div>
+      </Connections>
+    </PopOverBody>
+  </UserDetails>
+);
+
+const PopOver: React.FC<{ user: User; children: any }> = ({
+  user,
+  children,
+}) => {
   return (
-    <div>
-      <Whisper
-        placement="bottom"
-        trigger="hover"
-        controlId="control-id-hover-enterable"
-        speaker={speaker}
-        enterable
-      >
-        <Button>Hover + Enterable</Button>
-      </Whisper>
-    </div>
+    <Whisper
+      placement="bottom"
+      trigger="hover"
+      controlId="control-id-hover-enterable"
+      speaker={speaker(user)}
+      enterable
+    >
+      {children}
+    </Whisper>
   );
 };
 
-export default UserPopOver;
+export default PopOver;

@@ -1,12 +1,11 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../store/reducer";
 import {
-  increamentCouter,
   decreamentCouter,
+  increamentCouter,
 } from "../../store/modules/example/action";
+import { RootState } from "../../store/reducer";
 import { Button, Text } from "../styled-component";
-import UserPopOver from "../../components/common/pop-over";
 
 const Counter = () => {
   const dispatch = useDispatch();
@@ -25,7 +24,6 @@ const Counter = () => {
       <Button onClick={onAdd}>Add</Button>
       <Text>Count:{count} </Text>
       <Button onClick={onSubtract}>Subtract</Button>
-      <UserPopOver />
     </div>
   );
 };
