@@ -6,6 +6,7 @@ import {
   decreamentCouter,
 } from "../../store/modules/example/action";
 import { Button, Text } from "../styled-component";
+import UserPopOver from "../../components/common/pop-over";
 
 const Counter = () => {
   const dispatch = useDispatch();
@@ -24,6 +25,7 @@ const Counter = () => {
       <Button onClick={onAdd}>Add</Button>
       <Text>Count:{count} </Text>
       <Button onClick={onSubtract}>Subtract</Button>
+      <UserPopOver />
     </div>
   );
 };

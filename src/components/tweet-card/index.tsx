@@ -22,7 +22,7 @@ import {
   ShareIcon,
 } from "../../icons/styled-icons";
 import UserAvatar from "../common/avatar";
-import Title from "../common/Title";
+import Title from "../common/title";
 import UserName from "../common/user-name";
 
 const TweetCard: React.FC = () => {
