@@ -4,5 +4,4 @@ export type StyleAvatar = {
 };
 export type AvatarInfo = {
   url: string;
-  style: StyleAvatar;
 };

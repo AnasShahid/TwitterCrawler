@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { Whisper } from "rsuite";
 import "rsuite/dist/rsuite.css";
-import { User } from "../../../interfaces/components/tweet-card/index";
+import { User, UserPopOver } from "../../../interfaces";
 import { addUserToAnalysis } from "../../../store/modules/tweet/analysis/action";
 import { hashTagHighlighter } from "../../../utils/helper";
 import UserAvatar from "../avatar";
@@ -18,12 +18,7 @@ import {
   UserDiscription,
 } from "./style";
 
-const avatarStyle = { height: "70px", width: "70px" };
-
-const PopOver: React.FC<{ user: User; children: JSX.Element }> = ({
-  user,
-  children,
-}) => {
+const PopOver: React.FC<UserPopOver> = ({ user, children }) => {
   const dispatch = useDispatch();
   const onAddTOAnalysis = (user: User) => {
     dispatch(addUserToAnalysis(user));
@@ -33,7 +28,7 @@ const PopOver: React.FC<{ user: User; children: JSX.Element }> = ({
       <UserDetails>
         <PopOverHeader>
           <AvatarContainer>
-            <UserAvatar url={user.profile_image_url} style={avatarStyle} />
+            <UserAvatar url={user.profile_image_url} />
           </AvatarContainer>
           <AddToAnalysisButton
             onClick={() => {

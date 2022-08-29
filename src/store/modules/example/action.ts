@@ -1,13 +1,11 @@
 import { ACTION_TYPES } from "./types";
-
-export type Action = { type: string };
-export const increamentCouter = () => {
+export const incrementCounter = () => {
   return {
-    type: ACTION_TYPES.EXAMPLE_INCREAMENT_COUNTER,
+    type: ACTION_TYPES.EXAMPLE_INCREMENT_COUNTER,
   };
 };
-export const decreamentCouter = () => {
+export const decrementCounter = () => {
   return {
-    type: ACTION_TYPES.EXAMPLE_DECREAMENT_COUNTER,
+    type: ACTION_TYPES.EXAMPLE_DECREMENT_COUNTER,
   };
 };

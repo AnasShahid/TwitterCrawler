@@ -35,13 +35,12 @@ const TweetCard: React.FC<TweetInfo> = ({ tweet, user }) => {
     }
   };
 
-  const avatarStyle = { height: "70px", width: "70px" };
   return (
     <Card>
       <Tweet>
         <PopOver user={user}>
           <AvatarContainer>
-            <UserAvatar url={user.profile_image_url} style={avatarStyle} />
+            <UserAvatar url={user.profile_image_url} />
           </AvatarContainer>
         </PopOver>
 

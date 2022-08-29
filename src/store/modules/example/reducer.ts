@@ -1,4 +1,4 @@
-import { Action } from "./action";
+import { Action } from "../../../interfaces";
 import { ACTION_TYPES } from "./types";
 const intitialState = {
   example: {
@@ -10,7 +10,7 @@ export const exampleReducer = (state = intitialState, action: Action) => {
     example: { count },
   } = state;
   switch (action.type) {
-    case ACTION_TYPES.EXAMPLE_INCREAMENT_COUNTER:
+    case ACTION_TYPES.EXAMPLE_INCREMENT_COUNTER:
       return {
         ...state,
         example: {
@@ -18,7 +18,7 @@ export const exampleReducer = (state = intitialState, action: Action) => {
         },
       };
 
-    case ACTION_TYPES.EXAMPLE_DECREAMENT_COUNTER:
+    case ACTION_TYPES.EXAMPLE_DECREMENT_COUNTER:
       if (count > 0) {
         return {
           ...state,
