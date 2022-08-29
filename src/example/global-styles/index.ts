@@ -12,8 +12,7 @@ export const MainLayout = createGlobalStyle`
     width: 100%;
     height: 100%
     margin: 0 auto;
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: Arial;
   }
   .App {
     display: flex;

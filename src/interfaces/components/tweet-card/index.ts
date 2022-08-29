@@ -1,4 +1,4 @@
-export interface User {
+export type User = {
   id: string;
   verified: boolean;
   profile_image_url: string;
@@ -11,9 +11,9 @@ export interface User {
     listed_count: number;
   };
   username: string;
-}
+};
 
-export interface Tweet {
+export type Tweet = {
   created_at: string;
   reply_settings: string;
   possibly_sensitive: boolean;
@@ -53,9 +53,9 @@ export interface Tweet {
   source: string;
   author_id: string;
   conversation_id: string;
-}
+};
 
-export interface TweetInfo {
+export type TweetInfo = {
   user: User;
   tweet: Tweet;
-}
+};

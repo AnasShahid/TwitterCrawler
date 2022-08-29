@@ -1,19 +1,19 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../store/reducer";
 import {
-  increamentCouter,
-  decreamentCouter,
+  decrementCounter,
+  incrementCounter,
 } from "../../store/modules/example/action";
+import { RootState } from "../../store/reducer";
 import { Button, Text } from "../styled-component";
 
 const Counter = () => {
   const dispatch = useDispatch();
   const onAdd = () => {
-    dispatch(increamentCouter());
+    dispatch(incrementCounter());
   };
   const onSubtract = () => {
-    dispatch(decreamentCouter());
+    dispatch(decrementCounter());
   };
   const {
     example: { count },

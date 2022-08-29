@@ -11,6 +11,7 @@ export const Tweet = styled.div`
 `;
 export const AvatarContainer = styled.div`
   width: 15%;
+  height: fit-content;
 `;
 export const TweetContainer = styled.div`
 text-align : left:
@@ -22,7 +23,7 @@ export const UserInfo = styled.div`
   display: flex;
   align-items: center;
   h2 {
-    font-size: 20px;
+    font-size: 22px;
     margin: 0;
     &:hover {
       cursor: pointer;
@@ -31,6 +32,7 @@ export const UserInfo = styled.div`
   }
 `;
 export const InfoConatiner = styled.div`
+  font-size: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,6 +49,7 @@ export const InfoConatiner = styled.div`
 
 export const CreatedAt = styled.div`
   margin-left: 10px;
+  font-size: 18px;
   color: grey;
   font-weight: 700;
   &:hover {
@@ -58,6 +61,7 @@ export const CreatedAt = styled.div`
 export const TextContainer = styled.div`
   font-weight: 500;
   text-align: left;
+  font-size: 16px;
   .hash-mention {
     color: ${({ theme }) => theme.colors.lightBlue};
     font-weight: 600;
@@ -80,6 +84,7 @@ export const Feedback = styled.div`
 `;
 export const FollowersContainer = styled.div`
   font-weight: 600;
+  font-size: 18px;
   color: ${({ theme }) => theme.colors.grey};
 `;
 export const Followers = styled.span`
