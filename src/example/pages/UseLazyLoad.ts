@@ -1,47 +1,20 @@
 import { useEffect, useReducer, useCallback } from "react";
 import debounce from "lodash/debounce";
-
-// export interface ILazyLoad {
-//   currentPage: number;
-//   [data: string]: any;
-//   state?: boolean;
-// }
-// export interface IUseLazyLoad {
-//   [triggerRef: string]: any;
-// }
+import { LazyLoadReducer } from "../../store/modules/example/reducer";
+import { LAZY_LOAD_TYPE } from "../../store/modules/example/types";
+import { IUseLazyLoad } from "../../interfaces/use-lazy-load";
 
 const INTERSECTION_THRESHOLD = 5;
 const LOAD_DELAY_MS = 500;
 
-const reducer = (state: any, action: any) => {
-  switch (action.type) {
-    case "set": {
-      return {
-        ...state,
-        ...action.payload,
-      };
-    }
-    case "onGrabData": {
-      return {
-        ...state,
-        loading: false,
-        data: [...state.data, ...action.payload.data],
-        currentPage: state.currentPage + 1,
-      };
-    }
-    default:
-      return state;
-  }
-};
-
-const useLazyLoad = ({ triggerRef, onGrabData, options }: any) => {
-  const [state, dispatch] = useReducer(reducer, {
+const useLazyLoad = ({ triggerRef, onGrabData }: IUseLazyLoad) => {
+  const [state, dispatch] = useReducer(LazyLoadReducer, {
     loading: false,
     currentPage: 1,
     data: [],
   });
 
-  const _handleEntry = async (entry: any) => {
+  const _handleEntry = async (entry: IUseLazyLoad) => {
     const boundingRect = entry.boundingClientRect;
     const intersectionRect = entry.intersectionRect;
 
@@ -50,32 +23,31 @@ const useLazyLoad = ({ triggerRef, onGrabData, options }: any) => {
       entry.isIntersecting &&
       intersectionRect.bottom - boundingRect.bottom <= INTERSECTION_THRESHOLD
     ) {
-      dispatch({ type: "set", payload: { loading: true } });
+      dispatch({ type: LAZY_LOAD_TYPE.SET_DATA, payload: { loading: true } });
       const data = await onGrabData(state.currentPage);
-      dispatch({ type: "onGrabData", payload: { data } });
+      dispatch({ type: LAZY_LOAD_TYPE.ON_GRAB_DATA, payload: { data } });
     }
   };
   const handleEntry = debounce(_handleEntry, LOAD_DELAY_MS);
 
   const onIntersect = useCallback(
-    (entries: any) => {
+    (entries: IUseLazyLoad) => {
       handleEntry(entries[0]);
     },
+
     [handleEntry]
   );
 
   useEffect(() => {
     if (triggerRef.current) {
       const container = triggerRef.current;
-      const observer = new IntersectionObserver(onIntersect, options);
-
+      const observer = new IntersectionObserver(onIntersect);
       observer.observe(container);
-
       return () => {
         observer.disconnect();
       };
     }
-  }, [triggerRef, onIntersect, options]);
+  }, [triggerRef, onIntersect]);
 
   return state;
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { Route } from "../interfaces/Route";
+import { Route } from "../../interfaces";
 import Home from "../../example/pages/Home";
 import Contact from "../../example/pages/Contact";
 

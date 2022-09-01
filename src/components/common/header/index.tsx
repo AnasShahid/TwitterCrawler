@@ -1,8 +1,8 @@
 import React from "react";
-import MenuItems from "../../routes/config";
+import MenuItems from "../../../routes/config";
 import { Menu, MenuLink, Nav, NavbarContainer, Heading } from "./style";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   return (
     <div>
       <Nav>

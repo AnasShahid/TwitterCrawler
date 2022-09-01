@@ -1,4 +1,4 @@
-import { Container } from "../../global-styles";
+import { Container } from "../../../global-styles";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 // import { Twitter } from "@styled-icons/boxicons-logos/Twitter";

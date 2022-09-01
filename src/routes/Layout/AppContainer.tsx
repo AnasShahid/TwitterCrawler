@@ -3,11 +3,11 @@ import { Route, Routes } from "react-router-dom";
 import { GlobalStyle } from "../../global-styles";
 import MenuItems from "../config";
 import RouteContent from "./RouteContainer";
-import Navbar from "../../components/header";
+import Navbar from "../../components/common/header";
 import { Content, MainLayout } from "./style";
-import SearchBar from "../../components/search-bar";
+import SearchBar from "../../components/common/search-bar";
 
-const MainContainer = () => {
+const MainContainer: React.FC = () => {
   return (
     <MainLayout>
       <GlobalStyle />

@@ -24,19 +24,6 @@ export const Input = styled.input`
   cursor: text;
 `;
 
-export const SearchFilter = styled.div`
-  position: absolute;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  background: white;
-  width: 100%;
-  border: 1px gray;
-  -webkit-box-shadow: 0px 3px 8px 2px #ccc;
-  padding: 11px 20px;
-  border-radius: 10px;
-`;
-
 export const StyledInput = styled.div`
   &.inputWithIcon {
     position: relative;

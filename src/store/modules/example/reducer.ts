@@ -1,5 +1,5 @@
 import { Action } from "./action";
-import { ACTION_TYPES } from "./types";
+import { ACTION_TYPES, LAZY_LOAD_TYPE } from "./types";
 const intitialState = {
   example: {
     count: 0,
@@ -31,5 +31,26 @@ export const exampleReducer = (state = intitialState, action: Action) => {
 
     default:
       return { ...state };
+  }
+};
+
+export const LazyLoadReducer = (state: any, action: any) => {
+  switch (action.type) {
+    case LAZY_LOAD_TYPE.SET_DATA: {
+      return {
+        ...state,
+        ...action.payload,
+      };
+    }
+    case LAZY_LOAD_TYPE.ON_GRAB_DATA: {
+      return {
+        ...state,
+        loading: false,
+        data: [...state.data, ...action.payload.data],
+        currentPage: state.currentPage + 1,
+      };
+    }
+    default:
+      return state;
   }
 };

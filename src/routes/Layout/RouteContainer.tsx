@@ -1,8 +1,8 @@
 import React, { ReactNode } from "react";
 
-interface ContainerProps {
+export type ContainerProps = {
   content: ReactNode;
-}
+};
 const RouteContent = ({ content }: ContainerProps) => {
   return <div>{content}</div>;
 };
