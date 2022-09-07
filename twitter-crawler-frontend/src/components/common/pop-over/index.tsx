@@ -6,7 +6,7 @@ import { User, UserPopOver } from "../../../interfaces";
 import { addUserToAnalysis } from "../../../store/modules/tweet/analysis/action";
 import { hashTagHighlighter } from "../../../utils/helper";
 import UserAvatar from "../avatar";
-import Title from "../title";
+import Title from "../Title";
 import {
   AddToAnalysisButton,
   AvatarContainer,

@@ -10,7 +10,7 @@ import { TweetInfo } from "../../interfaces/components/tweet-card";
 import { getFormattedDate, hashTagHighlighter } from "../../utils/helper";
 import UserAvatar from "../common/avatar";
 import PopOver from "../common/pop-over";
-import Title from "../common/title";
+import Title from "../common/Title";
 import UserName from "../common/user-name";
 import {
   AvatarContainer,
