@@ -3,9 +3,9 @@ class response {
   data: any;
   msg?: string;
   errors?: any;
-  constructor(status: number, data?: any) {
+  constructor(status?: number, data?: any) {
     this.init();
-    this.status = status;
+    this.status = status || 200;
     this.data = data || {};
   }
 
