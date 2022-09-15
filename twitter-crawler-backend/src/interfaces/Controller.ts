@@ -27,6 +27,12 @@ interface authorDescription {
   author_id: string;
   id: string;
   text: string;
+  public_metrics: {
+    retweet_count: string;
+    reply_count: string;
+    like_count: string;
+    quote_count: string;
+  };
   author: {
     id: string;
     name: string;
