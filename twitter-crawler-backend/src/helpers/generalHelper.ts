@@ -21,7 +21,7 @@ const filterTweetData = (tweetData: ITwitterDataResponse) => {
   });
 
   return {
-    data,
+    tweetData: data,
     meta,
   };
 };

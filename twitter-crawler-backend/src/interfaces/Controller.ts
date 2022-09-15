@@ -27,6 +27,7 @@ interface authorDescription {
   author_id: string;
   id: string;
   text: string;
+  created_at: string;
   public_metrics: {
     retweet_count: string;
     reply_count: string;
@@ -37,6 +38,8 @@ interface authorDescription {
     id: string;
     name: string;
     description: string;
+    verified: boolean;
+    profile_image_url: string;
     public_metrics: {
       followers_count: number;
       following_count: number;
@@ -51,6 +54,8 @@ interface user {
   id: string;
   name: string;
   description: string;
+  verified: boolean;
+  profile_image_url: string;
   public_metrics: {
     followers_count: number;
     following_count: number;
