@@ -6,18 +6,16 @@ const filterTweetData = (tweetData: ITwitterDataResponse) => {
     includes: { users },
     meta,
   } = tweetData;
-
   data.forEach(({ author_id }: { author_id: string }, index: number) => {
-    users.forEach((user: user) => {
-      if (author_id === user.id) {
-        data[index] = {
-          ...data[index],
-          author: {
-            ...user,
-          },
-        };
-      }
-    });
+    const userArrayIndex = users.findIndex(
+      (user: user) => author_id === user.id
+    );
+    data[index] = {
+      ...data[index],
+      author: {
+        ...users[userArrayIndex],
+      },
+    };
   });
 
   return {

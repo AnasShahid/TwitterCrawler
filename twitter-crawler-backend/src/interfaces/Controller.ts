@@ -29,10 +29,10 @@ interface authorDescription {
   text: string;
   created_at: string;
   public_metrics: {
-    retweet_count: string;
-    reply_count: string;
-    like_count: string;
-    quote_count: string;
+    retweet_count: number;
+    reply_count: number;
+    like_count: number;
+    quote_count: number;
   };
   author: {
     id: string;
