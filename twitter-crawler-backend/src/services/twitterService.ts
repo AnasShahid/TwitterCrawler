@@ -1,12 +1,15 @@
-import { response } from "../helpers/models";
 import { filterTweetData } from "../helpers/generalHelper";
 
-import { ITwitterDataResponse, IClientTwitterRequest } from "../interfaces";
+import {
+  ITwitterDataResponse,
+  IClientTwitterRequest,
+  IResponseModel,
+} from "../interfaces";
 
 const getUserTweetRecords = async (
   param: string,
   req: IClientTwitterRequest,
-  result: any
+  result: IResponseModel
 ) => {
   const client = req.client;
   return new Promise((resolve, reject) => {

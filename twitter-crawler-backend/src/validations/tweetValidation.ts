@@ -1,6 +1,6 @@
 import { query } from "express-validator";
 
-import validate from "../middleware/validate";
+import { validateMiddleWare } from "../middleware";
 
 const tweetQueryValidation = [
   query("query")
@@ -12,7 +12,7 @@ const tweetQueryValidation = [
     )
     .withMessage("Query must contain query property"),
 
-  validate,
+  validateMiddleWare,
 ];
 
 export { tweetQueryValidation };

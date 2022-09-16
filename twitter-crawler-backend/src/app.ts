@@ -1,7 +1,7 @@
 import express, { Application } from "express";
 import http from "http";
 import { IController } from "./interfaces";
-import { twitterClientAuth } from "./middleware/twitterClient";
+import { twitterClientAuth } from "./middleware";
 import { ErrorRequestHandler } from "express";
 
 class App {
