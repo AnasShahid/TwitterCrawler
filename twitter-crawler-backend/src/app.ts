@@ -1,7 +1,8 @@
-import bodyParser from "body-parser";
 import express, { Application } from "express";
 import http from "http";
-import IController from "./interfaces/Controller";
+import { IController } from "./interfaces";
+import { twitterClientAuth } from "./middleware/twitterClient";
+import { ErrorRequestHandler } from "express";
 
 class App {
   public app: Application;
@@ -9,19 +10,14 @@ class App {
   constructor(controllers: IController[], port: any) {
     this.app = express();
     this.port = port;
-    // this.connectToDatabase();
     this.initializeMiddlewares();
     this.initializeControllers(controllers);
-    // this.registerPartials();
   }
 
   private initializeMiddlewares() {
-    this.app.use(bodyParser.json());
-    // this.app.use(cors());
-    // this.app.use(passport.initialize());
-
-    this.app.use(bodyParser.urlencoded({ extended: false }));
-    // this.app.use(cookie());
+    this.app.use(express.json());
+    this.app.use(twitterClientAuth);
+    this.app.use(express.urlencoded({ extended: false }));
   }
 
   private initializeControllers(controllers: IController[]) {
@@ -31,6 +27,12 @@ class App {
   }
 
   public listen() {
+    const errorHandler: ErrorRequestHandler = (error, req, res, next) => {
+      return res.status(error.status).json(error.getBody());
+    };
+
+    this.app.use(errorHandler);
+
     const server = http.createServer(this.app);
     server.listen(this.port, () =>
       console.log(`Server started on port ${this.port}`)

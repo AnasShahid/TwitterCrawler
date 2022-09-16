@@ -1,11 +1,11 @@
-require("dotenv").config(); //instatiate environment variables
+require("dotenv").config();
 
 module.exports = {
-  port: process.env.PORT,
-  authorization: process.env.AUTHORIZATION,
-  apiKey: process.env.APIKEY,
-  apiSecret: process.env.APISECRET,
-  accessToken: process.env.ACCESSTOKEN,
-  accessTokenSecret: process.env.ACCESSTOKENSECRET,
-  accept: process.env.ACCEPT,
+  PORT: process.env.PORT,
+  AUTHORIZATION: process.env.AUTHORIZATION,
+  APIKEY: process.env.APIKEY,
+  APISECRET: process.env.APISECRET,
+  ACCESSTOKEN: process.env.ACCESSTOKEN,
+  ACCESSTOKENSECRET: process.env.ACCESSTOKENSECRET,
+  ACCEPT: process.env.ACCEPT,
 };
