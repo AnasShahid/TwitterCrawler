@@ -1,4 +1,6 @@
-class response {
+import { IResponseModel } from "../interfaces/index";
+
+class response implements IResponseModel {
   status: number;
   data: any;
   msg?: string;

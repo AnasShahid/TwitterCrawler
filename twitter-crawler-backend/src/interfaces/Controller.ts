@@ -5,6 +5,23 @@ interface IController {
   path: string;
   router: Router;
 }
+interface IResponseModel {
+  status: number;
+  data: any;
+  msg?: string;
+  errors?: any;
+  init(): this;
+  setStatus(status: number): this;
+  setMsg(msg: string): this;
+  setData(data: any): this;
+  setError(label: string, msg: string): this;
+  getBody(): {
+    status: number;
+    data: any;
+    msg: string | undefined;
+    errors: any;
+  };
+}
 
 interface IClientTwitterRequest extends Request {
   [client: string]: any;
@@ -65,4 +82,10 @@ interface user {
   username: string;
 }
 
-export { IClientTwitterRequest, IController, ITwitterDataResponse, user };
+export {
+  IClientTwitterRequest,
+  IController,
+  ITwitterDataResponse,
+  user,
+  IResponseModel,
+};

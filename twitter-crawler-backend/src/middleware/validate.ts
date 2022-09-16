@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import { validationResult } from "express-validator";
 
-const validateMiddleWare = (
+export const validateMiddleWare = (
   req: Request,
   res: Response,
   next: NextFunction
@@ -14,5 +14,3 @@ const validateMiddleWare = (
   }
   next();
 };
-
-export default validateMiddleWare;
