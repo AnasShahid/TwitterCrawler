@@ -1,0 +1,3 @@
+export const ACTION_TYPES = {
+  ADD_USER_TO_ANALYSIS: "ADD_USER_TO_ANALYSIS",
+};

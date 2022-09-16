@@ -1,0 +1,97 @@
+{
+  "data": {
+    "created_at": "2022-08-20T13:33:54.000Z",
+    "reply_settings": "everyone",
+    "possibly_sensitive": false,
+    "attachments": {
+      "media_keys": [
+        "3_1560978503910162439",
+        "3_1560978503914459137",
+        "3_1560978503910264832",
+        "3_1560978503914356737"
+      ]
+    },
+    "lang": "en",
+    "entities": {
+      "urls": [
+        {
+          "start": 203,
+          "end": 226,
+          "url": "https://t.co/2WNHKduT6L",
+          "expanded_url": "https://twitter.com/ali1wahab/status/1560983464232587269/photo/1",
+          "display_url": "pic.twitter.com/2WNHKduT6L",
+          "media_key": "3_1560978503910162439"
+        },
+        {
+          "start": 203,
+          "end": 226,
+          "url": "https://t.co/2WNHKduT6L",
+          "expanded_url": "https://twitter.com/ali1wahab/status/1560983464232587269/photo/1",
+          "display_url": "pic.twitter.com/2WNHKduT6L",
+          "media_key": "3_1560978503914459137"
+        },
+        {
+          "start": 203,
+          "end": 226,
+          "url": "https://t.co/2WNHKduT6L",
+          "expanded_url": "https://twitter.com/ali1wahab/status/1560983464232587269/photo/1",
+          "display_url": "pic.twitter.com/2WNHKduT6L",
+          "media_key": "3_1560978503910264832"
+        },
+        {
+          "start": 203,
+          "end": 226,
+          "url": "https://t.co/2WNHKduT6L",
+          "expanded_url": "https://twitter.com/ali1wahab/status/1560983464232587269/photo/1",
+          "display_url": "pic.twitter.com/2WNHKduT6L",
+          "media_key": "3_1560978503914356737"
+        }
+      ],
+      "mentions": [
+        {
+          "start": 188,
+          "end": 202,
+          "username": "murtazawahab1",
+          "id": "724554176366284800"
+        }
+      ],
+      "hashtags": [
+        {
+          "start": 8,
+          "end": 19,
+          "tag": "kidneyhill"
+        },
+        {
+          "start": 179,
+          "end": 187,
+          "tag": "Karachi"
+        }
+      ]
+    },
+    "public_metrics": {
+      "retweet_count": 36,
+      "reply_count": 22,
+      "like_count": 252,
+      "quote_count": 2
+    },
+    "text": "Visited #kidneyhill for the first time today. What a beautiful place. Hopefully there will be a lot of marked spots for trekking. Can’t believe such a sprawling urban oasis is in #Karachi @murtazawahab1",
+    "id": "1560983464232587269",
+    "source": "Twitter for iPhone",
+    "author_id": "2731786790",
+    "conversation_id": "1560983464232587269"
+  },
+  "user": {
+    "description": "Visited #kidneyhill for the first time today. What a beautiful place. Hopefully there will be a lot of marked spots for trekking. Can’t believe such a sprawling urban oasis is in #Karachi @murtazawahab1",
+    "id": "2731786790",
+    "verified": false,
+    "profile_image_url": "https://pbs.twimg.com/profile_images/1387160070643875840/AdMdZpk9_normal.jpg",
+    "name": "Ali Wahab",
+    "public_metrics": {
+      "followers_count": 3405,
+      "following_count": 223,
+      "tweet_count": 16328,
+      "listed_count": 17
+    },
+    "username": "ali1wahab"
+  }
+}
