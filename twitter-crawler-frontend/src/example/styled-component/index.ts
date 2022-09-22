@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { color, flex, space, typography } from 'styled-system'
+import { color, flex, space, typography } from "styled-system";
 
 export const Button = styled.button`
   color: palevioletred;
@@ -14,7 +14,7 @@ export const Button = styled.button`
 export const Flex: any = styled.section(
   {
     boxSizing: "border-box",
-    minWidth: 0
+    minWidth: 0,
   },
   flex,
   space,
@@ -26,8 +26,8 @@ export const Text: any = styled.div`
 `;
 
 export const Box = styled.div`
-color: ${({ theme }) => theme.colors.yellow};
-`
+  color: ${({ theme }) => theme.colors.yellow};
+`;
 export const TextField = styled.input`
   padding: 0.5em;
   margin: 0.5em;
@@ -35,4 +35,3 @@ export const TextField = styled.input`
   border-radius: 3px;
   color: ${({ theme }) => theme.colors.green2};
 `;
-

@@ -1,97 +1,275 @@
 {
+  "msg": "tweets data fetched successfully",
   "data": {
-    "created_at": "2022-08-20T13:33:54.000Z",
-    "reply_settings": "everyone",
-    "possibly_sensitive": false,
-    "attachments": {
-      "media_keys": [
-        "3_1560978503910162439",
-        "3_1560978503914459137",
-        "3_1560978503910264832",
-        "3_1560978503914356737"
-      ]
-    },
-    "lang": "en",
-    "entities": {
-      "urls": [
-        {
-          "start": 203,
-          "end": 226,
-          "url": "https://t.co/2WNHKduT6L",
-          "expanded_url": "https://twitter.com/ali1wahab/status/1560983464232587269/photo/1",
-          "display_url": "pic.twitter.com/2WNHKduT6L",
-          "media_key": "3_1560978503910162439"
-        },
-        {
-          "start": 203,
-          "end": 226,
-          "url": "https://t.co/2WNHKduT6L",
-          "expanded_url": "https://twitter.com/ali1wahab/status/1560983464232587269/photo/1",
-          "display_url": "pic.twitter.com/2WNHKduT6L",
-          "media_key": "3_1560978503914459137"
-        },
-        {
-          "start": 203,
-          "end": 226,
-          "url": "https://t.co/2WNHKduT6L",
-          "expanded_url": "https://twitter.com/ali1wahab/status/1560983464232587269/photo/1",
-          "display_url": "pic.twitter.com/2WNHKduT6L",
-          "media_key": "3_1560978503910264832"
-        },
-        {
-          "start": 203,
-          "end": 226,
-          "url": "https://t.co/2WNHKduT6L",
-          "expanded_url": "https://twitter.com/ali1wahab/status/1560983464232587269/photo/1",
-          "display_url": "pic.twitter.com/2WNHKduT6L",
-          "media_key": "3_1560978503914356737"
-        }
+      "data": [
+          {
+              "author_id": "1373010725531234308",
+              "id": "1570390624398114818",
+              "public_metrics": {
+                  "retweet_count": 10,
+                  "reply_count": 0,
+                  "like_count": 0,
+                  "quote_count": 0
+              },
+              "text": "RT @KiranPMLN: Imran khan create a bad image of Pakistan\n#فتنے_سے_ملک_بچاؤ",
+              "created_at": "2022-09-15T12:34:35.000Z",
+              "author": {
+                  "description": "Senior Vice President PMLN Social Media Team Sahiwal \n#TeamNawazSharif\nJournalist Anchor person swl \n@KNews International \nDupety bureau Chief@LeaderNews",
+                  "id": "1373010725531234308",
+                  "verified": false,
+                  "profile_image_url": "https://pbs.twimg.com/profile_images/1565759443630956545/NkwmZ0RG_normal.jpg",
+                  "name": "Kiran Irshad (ببر شیرنی)💎",
+                  "public_metrics": {
+                      "followers_count": 5316,
+                      "following_count": 898,
+                      "tweet_count": 175720,
+                      "listed_count": 2
+                  },
+                  "username": "KiranPMLN"
+              }
+          },
+          {
+              "author_id": "1462086563014320129",
+              "id": "1570390623018000384",
+              "public_metrics": {
+                  "retweet_count": 90,
+                  "reply_count": 0,
+                  "like_count": 0,
+                  "quote_count": 0
+              },
+              "text": "RT @T20WorldCup: 🚨 JUST IN: Pakistan's squad for the 2022 ICC Men's #T20WorldCup is out. \n\nDetails 👇",
+              "created_at": "2022-09-15T12:34:35.000Z",
+              "author": {
+                  "description": "Bachelor in obsession with King Babar Azam!\n#BA56",
+                  "id": "1462086563014320129",
+                  "verified": false,
+                  "profile_image_url": "https://pbs.twimg.com/profile_images/1570373178467225600/NqCSX77b_normal.jpg",
+                  "name": "𝗔𝗷𝘄𝗮 𝗙𝗮𝘆𝘆𝗮𝘇 ♡",
+                  "public_metrics": {
+                      "followers_count": 308,
+                      "following_count": 122,
+                      "tweet_count": 8457,
+                      "listed_count": 0
+                  },
+                  "username": "BA56Forever"
+              }
+          },
+          {
+              "author_id": "1053620014727811072",
+              "id": "1570390621797646336",
+              "public_metrics": {
+                  "retweet_count": 1235,
+                  "reply_count": 0,
+                  "like_count": 0,
+                  "quote_count": 0
+              },
+              "text": "RT @iNaseemShah: Humbled to auction off my sixer bat from the Pak Vs. Afghan Asia Cup match for @SAFoundationN Flood Relief Campaign across…",
+              "created_at": "2022-09-15T12:34:35.000Z",
+              "author": {
+                  "description": "Nothing So Special Yet || ❤Coding+Memes || Humanist",
+                  "id": "1053620014727811072",
+                  "verified": false,
+                  "profile_image_url": "https://pbs.twimg.com/profile_images/1323234595832320002/zHNFHsir_normal.jpg",
+                  "name": "Musharaf Afridi",
+                  "public_metrics": {
+                      "followers_count": 1127,
+                      "following_count": 269,
+                      "tweet_count": 2351,
+                      "listed_count": 1
+                  },
+                  "username": "ImAfridi01"
+              }
+          },
+          {
+              "author_id": "1211469719267446786",
+              "id": "1570390619327004674",
+              "public_metrics": {
+                  "retweet_count": 0,
+                  "reply_count": 0,
+                  "like_count": 0,
+                  "quote_count": 0
+              },
+              "text": "@TheRealPCB @T20WorldCup RIP Pakistan team in advance 😢",
+              "created_at": "2022-09-15T12:34:34.000Z",
+              "author": {
+                  "description": "Political Graduate 🎓",
+                  "id": "1211469719267446786",
+                  "verified": false,
+                  "profile_image_url": "https://pbs.twimg.com/profile_images/1501932531687378944/gb11UuWE_normal.jpg",
+                  "name": "Bhagwan Das",
+                  "public_metrics": {
+                      "followers_count": 69,
+                      "following_count": 799,
+                      "tweet_count": 158,
+                      "listed_count": 3
+                  },
+                  "username": "Bhagwanmeghwar9"
+              }
+          },
+          {
+              "author_id": "2281988227",
+              "id": "1570390618601291778",
+              "public_metrics": {
+                  "retweet_count": 21,
+                  "reply_count": 0,
+                  "like_count": 0,
+                  "quote_count": 0
+              },
+              "text": "RT @Thecolistin: Pakistan was getting stable.\n\nAll it needed was some support to go ahead with some necessary and difficult decisions and a…",
+              "created_at": "2022-09-15T12:34:34.000Z",
+              "author": {
+                  "description": "Resident radiologist PGY-1🇵🇰|kmc|match applicant #USMLE🇺🇸 | interested in health justice, human rights,AI&research| weightlifter & a wanna be chef |he/him🩺",
+                  "id": "2281988227",
+                  "verified": false,
+                  "profile_image_url": "https://pbs.twimg.com/profile_images/1538901859079008257/hJDnlAPr_normal.jpg",
+                  "name": "Waasay khan",
+                  "public_metrics": {
+                      "followers_count": 935,
+                      "following_count": 1206,
+                      "tweet_count": 43742,
+                      "listed_count": 25
+                  },
+                  "username": "__oldwine"
+              }
+          },
+          {
+              "author_id": "763794396039016448",
+              "id": "1570390616051261441",
+              "public_metrics": {
+                  "retweet_count": 788,
+                  "reply_count": 0,
+                  "like_count": 0,
+                  "quote_count": 0
+              },
+              "text": "RT @TheRealPCB: Welcome to Pakistan, @englandcricket 🙌\n\nShow your excitement for the upcoming T20I series with an emoji 👇\n\n#PAKvENG https:/…",
+              "created_at": "2022-09-15T12:34:33.000Z",
+              "author": {
+                  "description": "sa nishta awre",
+                  "id": "763794396039016448",
+                  "verified": false,
+                  "profile_image_url": "https://pbs.twimg.com/profile_images/1294216929457119232/YL409FqL_normal.jpg",
+                  "name": "Usman Khan🇵🇰🇵🇰",
+                  "public_metrics": {
+                      "followers_count": 171,
+                      "following_count": 123,
+                      "tweet_count": 3941,
+                      "listed_count": 0
+                  },
+                  "username": "UsmanAcd"
+              }
+          },
+          {
+              "author_id": "1451093224894910465",
+              "id": "1570390615313231872",
+              "public_metrics": {
+                  "retweet_count": 295,
+                  "reply_count": 0,
+                  "like_count": 0,
+                  "quote_count": 0
+              },
+              "text": "RT @NKMalazai: A session judge in Naseerabad, #Sindh raided rice mill owned by Wazir Phulpoto, a former councillor and local leader of the…",
+              "created_at": "2022-09-15T12:34:33.000Z",
+              "author": {
+                  "description": "",
+                  "id": "1451093224894910465",
+                  "verified": false,
+                  "profile_image_url": "https://pbs.twimg.com/profile_images/1533073957703847937/GJbhMtjd_normal.jpg",
+                  "name": "Osman Waseem Butt",
+                  "public_metrics": {
+                      "followers_count": 1,
+                      "following_count": 101,
+                      "tweet_count": 122,
+                      "listed_count": 0
+                  },
+                  "username": "OsmanWaseemButt"
+              }
+          },
+          {
+              "author_id": "2373487327",
+              "id": "1570390614453395456",
+              "public_metrics": {
+                  "retweet_count": 320,
+                  "reply_count": 0,
+                  "like_count": 0,
+                  "quote_count": 0
+              },
+              "text": "RT @strangerous10: When Pauline Hanson tweets out Racist abuse telling someone to:\n“piss off back to Pakistan” - &amp; garners 10,000+ likes……",
+              "created_at": "2022-09-15T12:34:33.000Z",
+              "author": {
+                  "description": "IT Systems & Support Officer.. Former radio broadcaster.. Sing a little... Skeptic.. Rationalist.. Humanist.. Atheist.. interest in Climate Science. Facts First",
+                  "id": "2373487327",
+                  "verified": false,
+                  "profile_image_url": "https://pbs.twimg.com/profile_images/1497054887875837952/UpzzqCpR_normal.jpg",
+                  "name": "Kevin Salter 🇺🇦🇦🇺",
+                  "public_metrics": {
+                      "followers_count": 234,
+                      "following_count": 259,
+                      "tweet_count": 51428,
+                      "listed_count": 8
+                  },
+                  "username": "SkepticKev"
+              }
+          },
+          {
+              "author_id": "1373010725531234308",
+              "id": "1570390609822715904",
+              "public_metrics": {
+                  "retweet_count": 11,
+                  "reply_count": 0,
+                  "like_count": 0,
+                  "quote_count": 0
+              },
+              "text": "RT @KiranPMLN: Pakistan is our red line and we won't let anyone harm that\n#فتنے_سے_ملک_بچاؤ",
+              "created_at": "2022-09-15T12:34:32.000Z",
+              "author": {
+                  "description": "Senior Vice President PMLN Social Media Team Sahiwal \n#TeamNawazSharif\nJournalist Anchor person swl \n@KNews International \nDupety bureau Chief@LeaderNews",
+                  "id": "1373010725531234308",
+                  "verified": false,
+                  "profile_image_url": "https://pbs.twimg.com/profile_images/1565759443630956545/NkwmZ0RG_normal.jpg",
+                  "name": "Kiran Irshad (ببر شیرنی)💎",
+                  "public_metrics": {
+                      "followers_count": 5316,
+                      "following_count": 898,
+                      "tweet_count": 175720,
+                      "listed_count": 2
+                  },
+                  "username": "KiranPMLN"
+              }
+          },
+          {
+              "author_id": "1399394458563710976",
+              "id": "1570390608862224385",
+              "public_metrics": {
+                  "retweet_count": 19,
+                  "reply_count": 0,
+                  "like_count": 0,
+                  "quote_count": 0
+              },
+              "text": "RT @DunyaNews: ایم کیو ایم نے حکومت چھوڑنے کا عندیہ دے دیا #Mqm #Pakistan #politics #Govt  https://t.co/TH9P7uQuDU https://t.co/VcCorNFwvg",
+              "created_at": "2022-09-15T12:34:32.000Z",
+              "author": {
+                  "description": "I don't mind and they don't matter",
+                  "id": "1399394458563710976",
+                  "verified": false,
+                  "profile_image_url": "https://pbs.twimg.com/profile_images/1570383239524524034/tz4Iqihp_normal.jpg",
+                  "name": "Mustafa",
+                  "public_metrics": {
+                      "followers_count": 809,
+                      "following_count": 4789,
+                      "tweet_count": 6455,
+                      "listed_count": 4
+                  },
+                  "username": "mustafa_10r"
+              }
+          }
       ],
-      "mentions": [
-        {
-          "start": 188,
-          "end": 202,
-          "username": "murtazawahab1",
-          "id": "724554176366284800"
-        }
-      ],
-      "hashtags": [
-        {
-          "start": 8,
-          "end": 19,
-          "tag": "kidneyhill"
-        },
-        {
-          "start": 179,
-          "end": 187,
-          "tag": "Karachi"
-        }
-      ]
-    },
-    "public_metrics": {
-      "retweet_count": 36,
-      "reply_count": 22,
-      "like_count": 252,
-      "quote_count": 2
-    },
-    "text": "Visited #kidneyhill for the first time today. What a beautiful place. Hopefully there will be a lot of marked spots for trekking. Can’t believe such a sprawling urban oasis is in #Karachi @murtazawahab1",
-    "id": "1560983464232587269",
-    "source": "Twitter for iPhone",
-    "author_id": "2731786790",
-    "conversation_id": "1560983464232587269"
+      "meta": {
+          "newest_id": "1570390624398114818",
+          "oldest_id": "1570390608862224385",
+          "result_count": 10,
+          "next_token": "b26v89c19zqg8o3fpzbjo0xu2alodhth7a210ldrm2ttp"
+      }
   },
-  "user": {
-    "description": "Visited #kidneyhill for the first time today. What a beautiful place. Hopefully there will be a lot of marked spots for trekking. Can’t believe such a sprawling urban oasis is in #Karachi @murtazawahab1",
-    "id": "2731786790",
-    "verified": false,
-    "profile_image_url": "https://pbs.twimg.com/profile_images/1387160070643875840/AdMdZpk9_normal.jpg",
-    "name": "Ali Wahab",
-    "public_metrics": {
-      "followers_count": 3405,
-      "following_count": 223,
-      "tweet_count": 16328,
-      "listed_count": 17
-    },
-    "username": "ali1wahab"
-  }
+  "status": 200,
+  "errors": []
 }

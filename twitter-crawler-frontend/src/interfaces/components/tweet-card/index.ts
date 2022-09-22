@@ -1,4 +1,4 @@
-export type User = {
+export interface User {
   id: string;
   verified: boolean;
   profile_image_url: string;
@@ -11,37 +11,10 @@ export type User = {
     listed_count: number;
   };
   username: string;
-};
-
-export type Tweet = {
+}
+export interface TweetInfo {
+  author: User;
   created_at: string;
-  reply_settings: string;
-  possibly_sensitive: boolean;
-  attachments: {
-    media_keys: string[];
-  };
-  lang: string;
-  entities: {
-    urls: {
-      start: number;
-      end: number;
-      url: string;
-      expanded_url: string;
-      display_url: string;
-      media_key: string;
-    }[];
-    mentions: {
-      start: number;
-      end: number;
-      username: string;
-      id: string;
-    }[];
-    hashtags: {
-      start: number;
-      end: number;
-      tag: string;
-    }[];
-  };
   public_metrics: {
     retweet_count: number;
     reply_count: number;
@@ -50,12 +23,10 @@ export type Tweet = {
   };
   text: string;
   id: string;
-  source: string;
   author_id: string;
-  conversation_id: string;
-};
+}
 
-export type TweetInfo = {
-  user: User;
-  tweet: Tweet;
-};
+// export type TweetInfo = {
+//   user: User;
+//   tweet: Tweet;
+// };
