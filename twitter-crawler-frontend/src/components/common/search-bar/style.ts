@@ -5,6 +5,7 @@ export const SearchBarContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 100%;
   padding: 20px;
 `;
@@ -68,5 +69,42 @@ export const Select = styled.select`
     white-space: pre;
     min-height: 20px;
     padding: 0px 2px 1px;
+  }
+`;
+
+export const Container = styled.div`
+  width: 100%;
+  max-width: 800px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px auto;
+  overflow: hidden;
+  border: 2px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  animation: scale 0.5 linear;
+
+  @keyframes scale {
+    from {
+      transform: scale(0.5);
+    }
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    max-width: 150px;
+    height: 100%;
+    object-fit: cover;
+  }
+  p {
+    text-transform: capitalized;
+    letter-spacing: 2px;
+  }
+  span {
+    padding: 5px 20px;
+    margin: 0 10px;
   }
 `;

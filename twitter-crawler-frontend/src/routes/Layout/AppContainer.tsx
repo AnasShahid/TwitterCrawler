@@ -5,7 +5,6 @@ import MenuItems from "../config";
 import RouteContent from "./RouteContainer";
 import Navbar from "../../components/common/header";
 import { Content, MainLayout } from "./style";
-import SearchBar from "../../components/common/search-bar";
 
 const MainContainer: React.FC = () => {
   return (
@@ -13,7 +12,6 @@ const MainContainer: React.FC = () => {
       <GlobalStyle />
       <Navbar />
       <Content>
-        <SearchBar />
         <Routes>
           {MenuItems.map((menuItem) => (
             <Route

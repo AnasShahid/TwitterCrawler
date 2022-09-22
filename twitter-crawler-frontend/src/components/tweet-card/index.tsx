@@ -9,7 +9,6 @@ import {
 import { TweetInfo } from "../../interfaces/components/tweet-card";
 import { getFormattedDate, hashTagHighlighter } from "../../utils/helper";
 import UserAvatar from "../common/avatar";
-import PopOver from "../common/pop-over";
 import Title from "../common/Title";
 import UserName from "../common/user-name";
 import {
@@ -27,7 +26,7 @@ import {
   UserInfo,
 } from "./style";
 
-const TweetCard: React.FC<TweetInfo> = ({ tweet, user }) => {
+const TweetCard: React.FC<{ tweetDetails: TweetInfo }> = ({ tweetDetails }) => {
   const clickHandler = (e: any) => {
     const el = e.target.closest("span");
     if (el && e.currentTarget.contains(el)) {
@@ -38,23 +37,26 @@ const TweetCard: React.FC<TweetInfo> = ({ tweet, user }) => {
   return (
     <Card>
       <Tweet>
-        <PopOver user={user}>
-          <AvatarContainer>
-            <UserAvatar url={user.profile_image_url} />
-          </AvatarContainer>
-        </PopOver>
+        <AvatarContainer>
+          <UserAvatar url={tweetDetails.author.profile_image_url} />
+        </AvatarContainer>
 
         <TweetContainer>
           <InfoConatiner>
-            <PopOver user={user}>
-              <UserInfo>
-                <Title title={user.name} isVerified={user.verified} />
-                <UserName userName={user.username} />
-                <CreatedAt>.{getFormattedDate(tweet.created_at)}</CreatedAt>
-              </UserInfo>
-            </PopOver>
+            <UserInfo>
+              <Title
+                title={tweetDetails.author.name}
+                isVerified={tweetDetails.author.verified}
+              />
+              <UserName userName={tweetDetails.author.username} />
+              <CreatedAt>
+                .{getFormattedDate(tweetDetails.created_at)}
+              </CreatedAt>
+            </UserInfo>
             <FollowersContainer>
-              <Followers>{user.public_metrics.followers_count}</Followers>
+              <Followers>
+                {tweetDetails.author.public_metrics.followers_count}
+              </Followers>
               ,Followers
             </FollowersContainer>
             <div className="more">
@@ -64,22 +66,22 @@ const TweetCard: React.FC<TweetInfo> = ({ tweet, user }) => {
           <TextContainer>
             <div
               onClick={clickHandler}
-              dangerouslySetInnerHTML={hashTagHighlighter(tweet.text)}
+              dangerouslySetInnerHTML={hashTagHighlighter(tweetDetails.text)}
             />
           </TextContainer>
           <FeedbackContainer>
             <Feedback>
               <ReplyIcon />
-              <span>{tweet.public_metrics.reply_count}</span>
+              <span>{tweetDetails.public_metrics.reply_count}</span>
             </Feedback>
             <Feedback>
               <RetweetIcon />
-              <span>{tweet.public_metrics.retweet_count}</span>
+              <span>{tweetDetails.public_metrics.retweet_count}</span>
             </Feedback>
 
             <Feedback>
               <HeartIcon />
-              <span>{tweet.public_metrics.like_count}</span>
+              <span>{tweetDetails.public_metrics.like_count}</span>
             </Feedback>
 
             <Feedback>

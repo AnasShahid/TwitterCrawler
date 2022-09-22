@@ -1,6 +1,6 @@
 import React from "react";
 import { Route } from "../../interfaces";
-import Home from "../../example/pages/Home";
+import Home from "../../components/common/HomePage";
 import Contact from "../../example/pages/Contact";
 
 const MenuItems: Array<Route> = [
