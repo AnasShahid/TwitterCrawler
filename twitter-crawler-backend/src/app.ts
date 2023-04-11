@@ -3,6 +3,13 @@ import http from "http";
 import { IController } from "./interfaces";
 import { twitterClientAuth } from "./middleware";
 import { ErrorRequestHandler } from "express";
+import cors from "cors";
+
+const corsOptions = {
+  origin: "*",
+  credentials: true, //access-control-allow-credentials:true
+  optionSuccessStatus: 200,
+};
 
 class App {
   public app: Application;
@@ -15,6 +22,7 @@ class App {
   }
 
   private initializeMiddlewares() {
+    this.app.use(cors(corsOptions));
     this.app.use(express.json());
     this.app.use(twitterClientAuth);
     this.app.use(express.urlencoded({ extended: false }));
