@@ -41,7 +41,6 @@ const ThemePallete = {
     green2: "#297f5e",
     green3: "#389A73",
     brown: "#70430F",
-    lightBlue: "#07a4f5",
   },
 };
 export default ThemePallete;
